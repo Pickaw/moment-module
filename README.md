@@ -36,9 +36,31 @@ Or to strip all locales except “en”, “es-us” and “fa“
     ['@nuxtjs/moment', ['fa']]
  ]
 }
+
+// or
+
+{
+  modules: [
+    '@nuxtjs/moment'
+  ],
+  moment: {
+    locales: ['fa']
+  }
+}
 ```
 
 **Note:** “en” is built into Moment and can’t be removed)
+
+### Set default locale
+
+You can set a default locale via the `defaultLocale` option. It must be included
+int the locales you keep (or `'en'`) and will only work when using the plugin option.
+
+```js
+  modules: [
+    ['@nuxtjs/moment', { locales: ['de'], defaultLocale: 'de' }]
+ ]
+```
 
 ### Disable plugin
 
